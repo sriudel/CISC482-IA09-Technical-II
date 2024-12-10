@@ -1,0 +1,157 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Tool Panel -->
+    <LinearLayout
+        android:id="@+id/tool_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/brush_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brush"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/color_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/opacity_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opacity"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/eraser_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eraser"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <!-- Shape Tool Panel -->
+    <LinearLayout
+        android:id="@+id/shape_tool_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/tool_panel"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/circle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Circle"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/rectangle_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rectangle"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <Button
+            android:id="@+id/line_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Line"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <!-- Brush Size SeekBar -->
+    <SeekBar
+        android:id="@+id/brush_size"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/shape_tool_panel"
+        android:visibility="gone"
+        android:max="100" />
+
+    <!-- Opacity SeekBar -->
+    <SeekBar
+        android:id="@+id/opacity_control"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/brush_size"
+        android:visibility="gone"
+        android:max="255" />
+
+    <!-- Color Palette -->
+    <LinearLayout
+        android:id="@+id/color_palette"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/opacity_control"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/color_violet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8B00FF" />
+
+        <Button
+            android:id="@+id/color_indigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#4B0082" />
+
+        <Button
+            android:id="@+id/color_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0000FF" />
+
+        <Button
+            android:id="@+id/color_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00FF00" />
+
+        <Button
+            android:id="@+id/color_yellow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFF00" />
+
+        <Button
+            android:id="@+id/color_orange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF7F00" />
+
+        <Button
+            android:id="@+id/color_red"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF0000" />
+    </LinearLayout>
+
+    <!-- DoodleView -->
+    <com.example.ciscx82doodler.DoodleView
+        android:id="@+id/doodleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/color_palette" />
+
+</RelativeLayout>
