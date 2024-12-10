@@ -19,4 +19,5 @@ This is an advanced version of the Doodle application built for Android devices.
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/sriudel/CISC482-IA09-Technical-II
+   git clone https://github.com/sriudel/CISC482-IA09-Technical-II.git
+  
